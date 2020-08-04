@@ -1,0 +1,55 @@
+<div class="login-block">
+  <div id="login">
+    <div class="wrapper">
+      <h2 class="title">
+        Login Page
+      </h2>
+
+      <form action="index.html" [formGroup]="form" (ngSubmit)="submit()">
+        <label for="mail">Email</label>
+        <input
+          name="mail"
+          type="email"
+          id="mail"
+          placeholder="Enter your email"
+          formControlName="email"
+
+        >
+        <div *ngIf="form.get('email').invalid && form.get('email').touched">
+        <p *ngIf="form.get('email').errors.pattern">Enter correct email</p>
+        <p *ngIf="form.get('email').errors.required">Email field is empty</p>
+          <p *ngIf="form.get('email').errors.allowEmail" style="top: 75px">Wrong email</p>
+        </div>
+
+        <label for="password">Password</label>
+        <input
+          name="password"
+          type="text"
+          id="password"
+          placeholder="Enter your password"
+          formControlName="password"
+
+        >
+        <div *ngIf="form.get('password').invalid && form.get('password').touched">
+          <span *ngIf="form.get('password').errors.required">Password field is empty</span>
+          <span *ngIf="form.get('password').errors.minlength">
+            Password length must be {{form.get('password').errors.minlength.requiredLength}}
+            figures, but now it is {{form.get('password').errors.minlength.actualLength}}
+          </span>
+          <span *ngIf="form.get('password').errors.allowPassword" style="top: 200px">Wrong password</span>
+        </div>
+
+        <div class="form-btn__block">
+          <input name="check" class="check-box" type="checkbox" style="margin:0" formControlName="checkbox">
+            <button  class="form-button" type="submit"  [disabled]="form.invalid">
+
+                Login
+
+            </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="bg-pop"></div>

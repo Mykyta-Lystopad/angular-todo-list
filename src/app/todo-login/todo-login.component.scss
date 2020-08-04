@@ -1,0 +1,79 @@
+#login {
+  position: absolute;
+  max-width: 400px;
+  margin: 10% auto 0 auto;
+  right: 0;
+  left: 0;
+  background-color: #C9C4C5;
+  border-radius: 3px;
+  z-index: 1000;
+}
+
+.wrapper {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.form-button,
+.to-do__btn-add {
+  color: #fff;
+  background-color: blue;
+  border: 1px solid blue;
+  border-radius: 3px;
+  padding: 10px 37px;
+  cursor: pointer;
+}
+
+.to-do__btn-add {
+  margin: 0 0 0 2%;
+}
+
+.title {
+  margin: 40px 0 40px 0;
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  height: 30px;
+  margin: 10px 0 40px 0;
+  border: 2px solid #000;
+  border-radius: 3px;
+  &.ng-invalid.ng-touched {
+    border: 2px solid brown;
+  }
+  &.ng-valid {
+    border: 2px solid green;
+  }
+}
+
+form p,
+form span {
+  position: absolute;
+  top: 60px;
+  color: brown;
+}
+
+form span {
+  top: 160px;
+}
+
+.form-btn__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+input.check-box {
+  margin: 0;
+  padding: 0;
+}
+
+
+

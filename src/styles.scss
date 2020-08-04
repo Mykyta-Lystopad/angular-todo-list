@@ -1,0 +1,63 @@
+body{
+  font-family: sans-serif;
+}
+
+a,
+a:hover,
+a:active,
+a:focus,
+button,
+input,
+button:hover,
+button:active,
+button:focus,
+input:hover,
+input:active,
+input:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+*button {
+  cursor: pointer;
+}
+
+.bg-pop {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(31, 31, 31, 0.67);
+}
+
+.empty-tasks {
+  text-align:center;
+  margin-top:5%;
+  font-size:25px;
+}
+
+.unvisible {
+  display: none;
+
+}
+
+.visible {
+  display: flex;
+}
+
+

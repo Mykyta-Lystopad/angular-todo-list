@@ -1,0 +1,23 @@
+<div>
+
+  <app-todo-addandfilter
+
+  >
+  </app-todo-addandfilter
+  >
+
+  <app-todo-item
+
+    *ngFor="let i of array | async;"
+    [myTask]="i"
+
+  >
+  </app-todo-item>
+  <h2
+    *ngIf="(array | async)?.length === 0"
+  >
+    <p class="empty-tasks">Task'ov.net</p>
+  </h2>
+
+
+</div>

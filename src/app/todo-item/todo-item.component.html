@@ -1,0 +1,67 @@
+<div class="to-do__create-item">
+  <div style="display:none ">{{myTask.userId}}</div>
+  <div class="create-item__new-data">
+    <div class="create-item__data">{{myTask.taskDate}}</div>
+    <div class="create-item__time">{{myTask.taskTime}}</div>
+  </div>
+  <div class="create-item__number">{{myTask.index}}</div>
+  <div class="create-item__sort ">
+    <button class="sort-up" (click)="indexIncrease(myTask.index, myTask.userId)"></button>
+    <button class="sort-down" (click)="indexDecrease(myTask.index, myTask.userId)"></button>
+  </div>
+  <p class="create-item__new-task {{myTask.lineThrough}}">{{myTask.title}}</p>
+  <img class="rewrite"
+       src="assets/img/re-write.png"
+       alt="rewrite"
+       (click)="rewriteTask(myTask.title, myTask.taskTime)"
+  >
+  <img class="ready"
+       src="assets/img/ready.png"
+       alt="ready"
+       (click)="doneTask(myTask.userId)"
+  >
+  <img class="trash"
+       src="assets/img/trash.png"
+       alt="trash"
+       (click)="removeTask(myTask.userId)"
+  >
+</div>
+
+<!--task delete window-->
+<div class="to-do__delete-item {{deleteWindow}}">
+  <h3>Delete item?</h3>
+  <div class="delete-item__btn-block">
+    <button
+      class="delete_no"
+      (click)="denyDeleteTask()"
+    >
+      NO
+    </button>
+    <button
+      class="delete_yes action"
+      (click)="applyDeleteTask()"
+    >
+      YES
+    </button>
+  </div>
+</div>
+
+<!--task re-write winow-->
+<div class="to-do__rewrite-task {{rewriteWindow}}">
+  <h3>Edit text</h3>
+  <textarea class="to-do__rewrite-text" rows="10" [(ngModel)]="rewriteArea"></textarea>
+  <div class="delete-item__btn-block rewrite-item__btn-block">
+    <button
+      class="rewrite_no"
+      (click)="denyDeleteTask()"
+    >
+      CANCEL
+    </button>
+    <button
+      class="rewrite_yes action"
+      (click)="applyDeleteTask()"
+    >
+      SAVE</button>
+  </div>
+</div>
+<div class="bg-pop {{bgClass}}"></div>
