@@ -189,11 +189,5 @@ export class TasksservicesService {
       }))
     }
   }
-
-  localClear() {
-    this.array = [];
-    this.save();
-  }
-
 }
 
