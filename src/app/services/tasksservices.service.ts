@@ -180,7 +180,7 @@ export class TasksservicesService {
   }
 
   searchTask(searchTitle: string) {
-    if (searchTitle.length <= 1) {
+    if (searchTitle === '') {
       this.subj.next(this.array);
     }
     else {
@@ -191,8 +191,8 @@ export class TasksservicesService {
   }
 
   localClear() {
-    localStorage.removeItem(this.key);
-    location.reload();
+    this.array = [];
+    this.save();
   }
 
 }

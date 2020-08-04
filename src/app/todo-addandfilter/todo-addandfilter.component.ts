@@ -37,9 +37,7 @@ export class TodoAddandfilterComponent {
   }
 
   searchTask(){
-    if (this.searchTitle.trim()) {
       this.taskServices.searchTask(this.searchTitle)
-    }
   }
 
   localClear() {

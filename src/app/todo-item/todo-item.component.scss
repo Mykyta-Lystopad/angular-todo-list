@@ -65,6 +65,25 @@
   align-items: center;
   width: 100%;
   margin-top: 30px;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: 1px solid forestgreen;
+    background-color: forestgreen;
+    color: #fff;
+    cursor: pointer;
+  }
+
+
+
+
+
 }
 
 .create-item__new-data {

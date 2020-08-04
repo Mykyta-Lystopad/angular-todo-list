@@ -10,21 +10,15 @@
     <button class="sort-down" (click)="indexDecrease(myTask.index, myTask.userId)"></button>
   </div>
   <p class="create-item__new-task {{myTask.lineThrough}}">{{myTask.title}}</p>
-  <img class="rewrite"
-       src="assets/img/re-write.png"
-       alt="rewrite"
+  <span class="rewrite"
        (click)="rewriteTask(myTask.title, myTask.taskTime)"
-  >
-  <img class="ready"
-       src="assets/img/ready.png"
-       alt="ready"
+  >RW</span>
+  <span class="ready"
        (click)="doneTask(myTask.userId)"
-  >
-  <img class="trash"
-       src="assets/img/trash.png"
-       alt="trash"
+  >Ok</span>
+  <span class="trash"
        (click)="removeTask(myTask.userId)"
-  >
+  >X</span>
 </div>
 
 <!--task delete window-->

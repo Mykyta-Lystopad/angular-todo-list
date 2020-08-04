@@ -14,13 +14,11 @@
         123
       </div>
       <input class="search-task" type="search"[(ngModel)]="searchTitle" (input)="searchTask()">
-      <img width="35"
+      <span
            class="search-done to-do__search-sort"
-           src="assets/img/sort.png"
-           alt="ready"
            (click)="sortCompleted()"
-      >
-      <img class="clear_all" src="assets/img/trash-all.png" alt="clear_all" (click)="localClear()">
+      >Ok</span>
+      <span class="clear_all" (click)="localClear()">X</span>
     </div>
   </div>
 </div>
