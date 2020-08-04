@@ -33,17 +33,8 @@
 }
 
 .to-do__search input {
-  text-align: center;
   width: 50%;
   margin-left: 8%;
-}
-
-.to-do__search input:focus {
-  padding-left: 40px;
-}
-
-.search-task input:active {
-  padding-left: 40px;
 }
 
 .form-button,
@@ -284,12 +275,9 @@
   }
   .clear_all {
     position: absolute;
-    right: 0;
+    right: 10%;
     order: 1;
-    bottom: 0;
-  }
-  .to-do__create-item img {
-    margin-right: 0;
+    bottom: 4px;
   }
   .to-do__rewrite-task {
     max-width: 95%;

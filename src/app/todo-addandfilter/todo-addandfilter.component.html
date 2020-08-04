@@ -13,11 +13,11 @@
       <div class="to-do__search-index" (click)="sortIndex()">
         123
       </div>
-      <input class="search-task" type="search"[(ngModel)]="searchTitle" (input)="searchTask()">
+      <input class="search-task" type="search" [(ngModel)]="searchTitle" (input)="searchTask()" placeholder="Search">
       <span
            class="search-done to-do__search-sort"
            (click)="sortCompleted()"
-      >Ok</span>
+      >Y</span>
       <span class="clear_all" (click)="localClear()">X</span>
     </div>
   </div>
