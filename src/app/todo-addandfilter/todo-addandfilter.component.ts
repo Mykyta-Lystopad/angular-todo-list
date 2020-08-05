@@ -40,7 +40,4 @@ export class TodoAddandfilterComponent {
       this.taskServices.searchTask(this.searchTitle)
   }
 
-  localClear() {
-    this.taskServices.localClear()
-  }
 }

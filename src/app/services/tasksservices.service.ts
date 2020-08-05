@@ -72,7 +72,7 @@ export class TasksservicesService {
       this.array = json;
     }
     else {
-      this.http.get<Task[]>('http://jsonplaceholder.typicode.com/todos?_limit=3')
+      this.http.get<Task[]>('https://jsonplaceholder.typicode.com/todos?_limit=3')
         .subscribe(response => {
           for (let i of response) {
             this.add(i.title);
